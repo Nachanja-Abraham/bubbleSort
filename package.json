@@ -1,0 +1,52 @@
+{
+  "name": "bubblesort-implementations",
+  "version": "1.0.0",
+  "description": "Comprehensive bubble sort implementations with multiple design patterns",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ --fix",
+    "prettier": "prettier --write .",
+    "benchmark": "node benchmarks/index.js",
+    "build": "webpack --mode production",
+    "docker:build": "docker build -t bubblesort-app .",
+    "docker:run": "docker run -p 3000:3000 bubblesort-app",
+    "release": "standard-version",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": ["sorting", "algorithms", "bubble-sort", "design-patterns"],
+  "author": "WillKirkmanM",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "husky": "^8.0.0",
+    "jest": "^29.0.0",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.0.0",
+    "standard-version": "^9.0.0",
+    "semantic-release": "^19.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "dependencies": {
+    "winston": "^3.8.0",
+    "benchmark": "^2.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "prettier --write", "git add"],
+    "*.{json,md}": ["prettier --write", "git add"]
+  }
+}
