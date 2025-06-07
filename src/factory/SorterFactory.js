@@ -1,6 +1,6 @@
-const ClassicBubbleSort = require('../implementations/ClassicBubbleSort');
-const OptimizedBubbleSort = require('../implementations/OptimizedBubbleSort');
-const RecursiveBubbleSort = require('../implementations/RecursiveBubbleSort');
+const ClassicBubbleSort = require('./implementations/ClassicBubbleSort');
+const OptimizedBubbleSort = require('./implementations/OptimizedBubbleSort');
+const RecursiveBubbleSort = require('./implementations/RecursiveBubbleSort');
 
 /**
  * Factory pattern for creating different bubble sort implementations
