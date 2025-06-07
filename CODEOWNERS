@@ -1,0 +1,18 @@
+# Global owners
+* @WillKirkmanM
+
+# Core algorithm implementations
+/src/core/ @WillKirkmanM
+/src/implementations/ @WillKirkmanM
+
+# Testing
+/tests/ @WillKirkmanM
+
+# DevOps and CI/CD
+/.github/ @WillKirkmanM
+/docker/ @WillKirkmanM
+/k8s/ @WillKirkmanM
+
+# Documentation
+/docs/ @WillKirkmanM
+README.md @WillKirkmanM
